@@ -18,7 +18,7 @@ using jsonify: it made a json response which is readable to machine
 
 ### ***Input***
 
-You will enter the below url in your browser to do **live** currency conversion from EURO to Candian Dollars (CAD) and pass a float value *in normal english language we would say a decimal point value* to get the output....
+You will enter the below url in your browser to do **live** currency conversion from **Euro** to **Canadian Dollars (CAD)** and pass a float value ***in normal english language we would say a decimal point value*** to get the output....
 
 ```
 http://127.0.0.1:5000/currency/euro/cad/500
