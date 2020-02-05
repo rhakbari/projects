@@ -8,6 +8,9 @@ deactivate
 pip freeze
 pip install flask flask-cors
 mkvirtualenv test-api
+
+https://virtualenvwrapper.readthedocs.io/en/latest/install.html
+
 ```
 
 ```
