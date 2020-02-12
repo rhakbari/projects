@@ -7,9 +7,9 @@ from flask import Flask, jsonify
 app = Flask(__name__)
 
 # Your Account SID from twilio.com/console
-ACCOUNT_SID = "ACb389df318e66cfb10ff8bc8992633581"
+ACCOUNT_SID = "Account_Sid"
 # Your Auth Token from twilio.com/console
-AUTH_TOKEN = "5b46d9b0afff17cd89ccb966ef4c0658"
+AUTH_TOKEN = "auth_token"
 
 
 @app.route("/send/whatsapp/03183339148")
