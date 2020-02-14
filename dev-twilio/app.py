@@ -8,11 +8,12 @@ from flask import Flask, jsonify, request
 app = Flask(__name__)
 
 # Your Account SID from twilio.com/console
-ACCOUNT_SID = "ACfd245978f13be3b6c22999b046fb6a6a"
+ACCOUNT_SID = "account_sid"
 # Your Auth Token from twilio.com/console
-AUTH_TOKEN = "3604bdb5409028009cfc5298cb9e4dbf"
-
-sender_num = "+923183339148: "
+AUTH_TOKEN = "auth_token"
+# Sender's phone number
+sender_num ="+921234567890: "
+# Twilio bot phone number 
 bot_num = "+14155238886: "
 
 @app.route("/sms")
@@ -20,12 +21,13 @@ bot_num = "+14155238886: "
 def sms_reply():
     client = Client(ACCOUNT_SID, AUTH_TOKEN)
     message = client.messages.create(
-        body=bot_num+"hi this is a test sms",
-        from_="whatsapp:+14155238886",
-        to="whatsapp:+923183339148",
+        body=bot_num+"hi this is a test sms", # <number> : <message> format
+        from_="whatsapp:+14155238886", # twilio bot phone number
+        to="whatsapp:phone number",
     )
     return jsonify({"message": "whatsapp sms sent"})
 
+# Forwards the message from whatsapp to the phone number via SMS
 
 @app.route("/whatsappsms", methods=["GET", "POST"])
 def send_text():
@@ -34,14 +36,14 @@ def send_text():
     resp = MessagingResponse()
     message = client.messages.create(
         body="Your message has been sent",
-        from_="whatsapp:+14155238886",
-        to="whatsapp:+923183339148",
+        from_="whatsapp:+14155238886", # twilio bot phone number
+        to="whatsapp:phone number",
     )
     message = client.messages.create(
 
-        body=sender_num+request.values.get('Body', None),
-        from_="+18577634315",
-        to="+923432918501",
+        body=sender_num+request.values.get('Body', None), # <number> : <message> formats
+        from_="phone number",  # Registered number from twilio 
+        to="phone number",
     )
 
     return jsonify({"message": "sms sent"})
