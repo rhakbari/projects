@@ -16,18 +16,17 @@ sender_num ="+921234567890: "
 # Twilio bot phone number 
 bot_num = "+14155238886: "
 
-@app.route("/sms")
+@app.route("/whatsapp")
 # def send_whatapp():
 def sms_reply():
     client = Client(ACCOUNT_SID, AUTH_TOKEN)
     message = client.messages.create(
-        body=bot_num+"hi this is a test sms", # <number> : <message> format
-        from_="whatsapp:+14155238886", # twilio bot phone number
-        to="whatsapp:phone number",
+        body=bot_num+"hi this is a test sms",
+        from_="whatsapp:+14155238886",
+        to="whatsapp:+923183339148",
     )
     return jsonify({"message": "whatsapp sms sent"})
 
-# Forwards the message from whatsapp to the phone number via SMS
 
 @app.route("/whatsappsms", methods=["GET", "POST"])
 def send_text():
@@ -36,14 +35,26 @@ def send_text():
     resp = MessagingResponse()
     message = client.messages.create(
         body="Your message has been sent",
-        from_="whatsapp:+14155238886", # twilio bot phone number
-        to="whatsapp:phone number",
+        from_="whatsapp:+14155238886",
+        to="whatsapp:+923183339148",
     )
     message = client.messages.create(
+        body=request.values.get('From', None)+": "+request.values.get('Body', None),
+        from_="+18577634315",
+        to="+923432918501",
+        )
 
-        body=sender_num+request.values.get('Body', None), # <number> : <message> formats
-        from_="phone number",  # Registered number from twilio 
-        to="phone number",
+    #receiving sms from phone number
+    message = client.messages.create(
+        body=request.values.get('Body', None),
+        from_="+18577634315",
+        to="+whatsapp:+923183339148",
+    )
+
+    message = client.messages.create(
+        body=request.values.get('Body', None),
+        from_="whatsapp:+14155238886",
+        to="+whatsapp:+923183339148",
     )
 
     return jsonify({"message": "sms sent"})
