@@ -1,6 +1,8 @@
-# projects
+# Projects
 
 ## personal project/practices
+
+https://realpython.com/primer-on-python-decorators/
 
 # Installing packages using pip and virtual environments
 
