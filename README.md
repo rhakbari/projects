@@ -6,9 +6,7 @@ https://realpython.com/primer-on-python-decorators/
 
 # Installing packages using pip and virtual environments
 
-This guide discusses how to install packages using pip and a virtual environment manager: either venv for Python 3 or virtualenv for Python 2. These are the lowest-level tools for managing Python packages and are recommended if higher-level tools do not suit your needs.
-
-Note This doc uses the term package to refer to a Distribution Package which is different from a Import Package that which is used to import modules in your Python source code.
+This guide discusses how to install packages using pip and a virtual environment manager: virtualenv for Python 3. 
 
 ## Installing pip
 pip is the reference Python package manager. It’s used to install and update packages. You’ll need to make sure you have the latest version of pip installed.
