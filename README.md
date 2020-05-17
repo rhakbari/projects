@@ -1,6 +1,6 @@
 # Projects
 
-## personal project/practices
+## Personal project/practices
 
 https://realpython.com/primer-on-python-decorators/
 
@@ -12,29 +12,29 @@ This guide discusses how to install packages using pip and a virtual environment
 pip is the reference Python package manager. It’s used to install and update packages. You’ll need to make sure you have the latest version of pip installed.
 
 
-## Linux and macOS
+## Linux 
 Debian and most other distributions include a python-pip package, if you want to use the Linux distribution-provided versions of pip see Installing pip/setuptools/wheel with Linux Package Managers.
 
 You can also install pip yourself to ensure you have the latest version. It’s recommended to use the system pip to bootstrap a user installation of pip:
 ```
-python3 -m pip install --user --upgrade pip
+$ python3 -m pip install --user --upgrade pip
 ```
 Afterwards, you should have the newest pip installed in your user site:
 ```
-python3 -m pip --version
+$ python3 -m pip --version
 ```
 
 # Installing Virtualenvwrapper on Linux
 
 If you're using Ubuntu 19.10 or below then write:
 ```
-pip install virtualenvwrapper
+$ pip install virtualenvwrapper
 
 ```
 
 If you're using Ubuntu 20.04 or above then write:
 ```
-pip3 install virtualenvwrapper
+$ pip3 install virtualenvwrapper
 
 ```
 This is because python2 has been deleted from ubuntu 20.04 and in order to use python or pip we have to write "3" in the end:
@@ -57,7 +57,7 @@ source ~/.local/bin/virtualenvwrapper.sh
 ## To make your virtual environment write the below command:
 
 ```
-mkvirualenv (name of your environment)
+$ mkvirualenv (name of your environment)
 ```
 
 ## Leaving the virtual environment
@@ -65,13 +65,13 @@ mkvirualenv (name of your environment)
 If you want to switch projects or otherwise leave your virtual environment, simply run:
 
 ```
-deactivate
+$ deactivate
 ```
 
 ## In order to continue working with your previous environment just write the below command:
 
 ```
-workon (name of your environment)
+$ workon (name of your environment)
 ```
 
 If you want to re-enter the virtual environment just follow the same instructions above about activating a virtual environment. There’s no need to re-create the virtual environment.
