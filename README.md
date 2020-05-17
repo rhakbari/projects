@@ -12,7 +12,7 @@ This guide discusses how to install packages using pip and a virtual environment
 pip is the reference Python package manager. It’s used to install and update packages. You’ll need to make sure you have the latest version of pip installed.
 
 
-## Linux 
+## This is for Linux only 
 Debian and most other distributions include a python-pip package, if you want to use the Linux distribution-provided versions of pip see Installing pip/setuptools/wheel with Linux Package Managers.
 
 You can also install pip yourself to ensure you have the latest version. It’s recommended to use the system pip to bootstrap a user installation of pip:
@@ -24,7 +24,7 @@ Afterwards, you should have the newest pip installed in your user site:
 $ python3 -m pip --version
 ```
 
-# Installing Virtualenvwrapper on Linux
+# Installing Virtualenvwrapper
 
 If you're using Ubuntu 19.10 or below then write:
 ```
