@@ -57,7 +57,7 @@ source ~/.local/bin/virtualenvwrapper.sh
 ## To make your virtual environment write the below command:
 
 ```
-$ mkvirualenv (name of your environment)
+$ mkvirtualenv (name of your environment)
 ```
 
 ## Leaving the virtual environment
