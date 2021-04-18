@@ -76,9 +76,8 @@ $ workon (name of your environment)
 
 If you want to re-enter the virtual environment just follow the same instructions above about activating a virtual environment. There’s no need to re-create the virtual environment.
 
-##Terminal Shortcuts: 
-
-- Terminal Window Tabs
+## Terminal Shortcuts: 
+### Terminal Window Tabs
 - Shift+Ctrl+T: Open a new tab.
 - Shift+Ctrl+W Close the current tab.
 - Ctrl+Page Up: Switch to the previous tab.
