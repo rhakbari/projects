@@ -26,15 +26,10 @@ $ python3 -m pip --version
 
 # Installing Virtualenvwrapper
 
-If you're using Ubuntu 19.10 or below then write:
-```
-$ pip install virtualenvwrapper
+If you're using Ubuntu 24.04 or above then write:
 
 ```
-
-If you're using Ubuntu 20.04 or above then write:
-```
-$ pip3 install virtualenvwrapper
+sudo apt install python3-virtualenvwrapper
 
 ```
 This is because python2 has been deleted from ubuntu 20.04 and in order to use python or pip we have to write "3" in the end:
